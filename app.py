@@ -64,8 +64,7 @@ def dashboard():
     if 'user_id' not in session:
         flash('Você precisa fazer login primeiro.', 'danger')
         return redirect(url_for('login'))
-    return "Bem-vindo ao Dashboard!"
-
+    return render_template('dashboard.html')
 # Rota para logout
 @app.route('/logout')
 def logout():
