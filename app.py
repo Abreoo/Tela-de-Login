@@ -66,7 +66,8 @@ def dashboard():
         flash('Você precisa fazer login primeiro.', 'danger')
         return redirect(url_for('login'))
     
-    return "Bem-vindo ao Dashboard!"
+    user = Usuario.query.get(session['user_id'])
+    return render_template('dashboard.html', username=user.username)
 
 # Rota para logout
 @app.route('/logout')
