@@ -6,6 +6,9 @@
 ![License](https://img.shields.io/badge/License-MIT-yellow)
 ![Status](https://img.shields.io/badge/Status-Em%20Desenvolvimento-red)
 
+![login](https://github.com/user-attachments/assets/9ecfeea2-1d72-496a-ab32-6758951350bb)
+
+
 Este é um simples site de login desenvolvido para autenticação de usuários. O objetivo deste projeto é fornecer uma base para a criação de um sistema de login seguro e funcional, que pode ser facilmente integrado em projetos web maiores.
 
 ## Funcionalidades
