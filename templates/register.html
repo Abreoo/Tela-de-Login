@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title> 
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="ring">
+        <i style="--clr:#1e00ff;"></i>
+        <i style="--clr:#000000;"></i>
+        <i style="--clr:#f5f5f5;"></i>
+        <div class="login">
+          <h2>Registre-se</h2>
+          <form action="{{ url_for('login') }}" method="POST">
+              <div class="inputBx">
+                  <input type="text" name="username" placeholder=" Crie seu Usuario" required>
+              </div>
+              <div class="inputBx">
+                  <input type="password" name="password" placeholder=" crie sua Senha" required>
+              </div>
+              <div class="inputBx">
+                  <input type="submit" value="Criar conta">
+              </div>
+          </form>
+          <div class="links">
+            <a href="#">Ja tenho conta</a>
+            <a href="{{ url_for('register') }}">
+                inscrever-se</a>
+        </div>
+        </div>
+      </div>
+</body>
+</html>
