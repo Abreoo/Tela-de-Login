@@ -1,5 +1,5 @@
 import os
-from flask import Flask, render_template, request, redirect, url_for, flash
+from flask import Flask, render_template, request, redirect, url_for, flash, session
 from flask_sqlalchemy import SQLAlchemy
 from werkzeug.security import generate_password_hash, check_password_hash
 
@@ -25,6 +25,12 @@ def register():
         password = request.form['password']
         hashed_password = generate_password_hash(password, method='sha256')
 
+        # Verifica se o usuário já existe
+        existing_user = Usuario.query.filter_by(username=username).first()
+        if existing_user:
+            flash('Nome de usuário já existe. Tente outro.', 'danger')
+            return redirect(url_for('register'))
+
         new_user = Usuario(username=username, password=hashed_password)
         db.session.add(new_user)
         db.session.commit()
@@ -43,6 +49,7 @@ def login():
         user = Usuario.query.filter_by(username=username).first()
 
         if user and check_password_hash(user.password, password):
+            session['user_id'] = user.id  # Armazena o ID do usuário na sessão
             flash('Login realizado com sucesso!', 'success')
             return redirect(url_for('dashboard'))
         else:
@@ -53,7 +60,17 @@ def login():
 # Rota para o dashboard após o login
 @app.route('/dashboard')
 def dashboard():
+    if 'user_id' not in session:
+        flash('Você precisa fazer login primeiro.', 'danger')
+        return redirect(url_for('login'))
     return "Bem-vindo ao Dashboard!"
+
+# Rota para logout
+@app.route('/logout')
+def logout():
+    session.pop('user_id', None)  # Remove o usuário da sessão
+    flash('Você foi desconectado com sucesso.', 'success')
+    return redirect(url_for('login'))
 
 if __name__ == '__main__':
     # Garantir que o contexto da aplicação está ativo
