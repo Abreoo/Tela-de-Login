@@ -63,7 +63,7 @@ body {
 .login {
   position: absolute;
   width: 300px;
-  height: 100%;
+  height: 80%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -113,42 +113,28 @@ body {
   text-decoration: none;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-
 .flashes {
-    list-style: none;
-    padding: 0;
-    margin: 10px 0;
-    font-family: 'Roboto', sans-serif; /* Fonte personalizada */
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+  font-family: 'Roboto', sans-serif; /* Altere a fonte conforme necessário */
 }
 
 .flashes li {
-    padding: 15px;
-    border-radius: 5px;
-    margin-bottom: 10px;
-    font-size: 1.1em;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-size: 1.1em;
 }
 
 .success {
-    background-color: #d4edda;
-    color: #155724;
-    border: 1px solid #c3e6cb;
+  background-color: transparent;  /* Cor de fundo verde clara */
+  color: #ffffff;             /* Cor do texto verde escuro */
+  border: 1px solid #c3e6cb;  /* Borda verde clara */
 }
 
 .danger {
-    background-color: #f8d7da;
-    color: #721c24;
-    border: 1px solid #f5c6cb;
-}
-
-.warning {
-    background-color: #fff3cd;
-    color: #856404;
-    border: 1px solid #ffeeba;
-}
-
-.info {
-    background-color: #d1ecf1;
-    color: #0c5460;
-    border: 1px solid #bee5eb;
+  background-color: transparent;  /* Cor de fundo vermelha clara */
+  color: #f3f3f3;             /* Cor do texto vermelho escuro */
+  border: 1px solid #fbfbfb;  /* Borda vermelha clara */
 }
