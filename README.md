@@ -28,7 +28,7 @@ Este é um simples site de login desenvolvido para autenticação de usuários. 
 - **Backend:**
   - Python
   - Flask
-  - MongoDB (ou outro banco de dados à sua escolha)
+  - MongoDB 
 
 - **Autenticação:**
   - JWT (JSON Web Tokens)
