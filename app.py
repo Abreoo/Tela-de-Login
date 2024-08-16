@@ -23,7 +23,8 @@ def register():
     if request.method == 'POST':
         username = request.form['username']
         password = request.form['password']
-        hashed_password = generate_password_hash(password, method='sha256')
+        hashed_password = generate_password_hash(password, method='pbkdf2:sha256')
+
 
         # Verifica se o usuário já existe
         existing_user = Usuario.query.filter_by(username=username).first()
