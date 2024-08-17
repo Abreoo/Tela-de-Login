@@ -117,7 +117,7 @@ body {
   list-style: none;
   padding: 0;
   margin: 10px 0;
-  font-family: 'Roboto', sans-serif; /* Altere a fonte conforme necessário */
+  font-family: "Roboto", sans-serif; /* Altere a fonte conforme necessário */
 }
 
 .flashes li {
@@ -128,13 +128,13 @@ body {
 }
 
 .success {
-  background-color: transparent;  /* Cor de fundo verde clara */
-  color: #ffffff;             /* Cor do texto verde escuro */
-  border: 1px solid #c3e6cb;  /* Borda verde clara */
+  background-color: transparent; /* Cor de fundo verde clara */
+  color: #ffffff; /* Cor do texto verde escuro */
+  border: 1px solid #c3e6cb; /* Borda verde clara */
 }
 
 .danger {
-  background-color: transparent;  /* Cor de fundo vermelha clara */
-  color: #f3f3f3;             /* Cor do texto vermelho escuro */
-  border: 1px solid #fbfbfb;  /* Borda vermelha clara */
+  background-color: transparent; /* Cor de fundo vermelha clara */
+  color: #f3f3f3; /* Cor do texto vermelho escuro */
+  border: 1px solid #fbfbfb; /* Borda vermelha clara */
 }

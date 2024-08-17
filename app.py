@@ -4,7 +4,7 @@ from flask_sqlalchemy import SQLAlchemy
 from werkzeug.security import generate_password_hash, check_password_hash
 
 app = Flask(__name__)
-app.secret_key = os.getenv('SECRET_KEY')
+app.secret_key = str(os.getenv('SECRET_KEY'))
 
 # Configuração do banco de dados (SQLite como exemplo)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///usuarios.db'
