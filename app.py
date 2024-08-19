@@ -56,7 +56,7 @@ def login():
         else:
             flash('Nome de usuário ou senha incorretos.', 'danger')
 
-    return render_template('index.html')
+    return render_template('login.html')
 
 # Rota para o dashboard após o login
 @app.route('/dashboard')
